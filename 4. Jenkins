@@ -1,0 +1,103 @@
+What is Jenkins?
+
+Jenkins is an open-source automation server** used to build, test, and deploy software automatically. It helps implement Continuous Integration (CI) and Continuous Deployment (CD)** pipelines.
+
+- Why Use Jenkins in DevOps?
+
+* Automates repetitive tasks (build → test → deploy)
+* Triggers actions on every code push (CI)
+* Helps deliver faster and more reliable software
+* Supports integration with tools like Git, Docker, Maven, Kubernetes, etc.
+
+- Key Concepts :
+
+| Term         | Meaning                                |
+| ------------ | -------------------------------------- |
+|  Job         | A task (e.g., build a project)         |
+|  Pipeline    | Scripted automation of stages          |
+| Plugin       | Extends Jenkins features (Git, Docker) |
+| Node         | A machine that runs Jenkins jobs       |
+
+---
+
+Pipeline Stages Example :
+
+* Build : Compile code
+* Test : Run tests
+* Deploy : Push to server or cloud
+
+Important Jenkins Features : 
+
+* Web-based UI to manage jobs
+* Supports scripted and declarative pipelines
+* Works with tools like GitHub, Slack, and Jira
+* Can be installed on any OS
+
+
+- Implementation Over :
+1. Jobs and Manage Jobs
+2. Create Pipeline
+3. Types of Pipeline.
+
+
+Futhermore,
+1. Jobs are tasks in Jenkins like pulling code, compiling, testing, or deploying.
+- How to do it:
+* Open Jenkins and click on "New Item"
+* Choose "Freestyle Project"
+* Set up:
+  * Source Code (like GitHub repo URL)
+  * Build Triggers (when to start the job, like after code push)
+  * Build Steps (commands to run, like `npm run build` or `mvn install`)
+* Save the job and click "Build Now" to run it.
+
+---
+
+2. A pipeline automates the steps like build → test → deploy.
+]How to create it:
+
+* Go to "New Item" and select "Pipeline"
+* Scroll down to the "Pipeline Script" section and paste this code:
+
+```groovy
+pipeline {
+  agent any
+  stages {
+    stage('Build') {
+      steps {
+        echo 'Building the project...'
+      }
+    }
+    stage('Test') {
+      steps {
+        echo 'Running tests...'
+      }
+    }
+    stage('Deploy') {
+      steps {
+        echo 'Deploying to server...'
+      }
+    }
+  }
+}
+```
+
+* Save it and click "Build Now"
+
+---
+
+3. Types of Pipelines
+
+* Declarative: Easy to write using structured `pipeline {}` syntax
+* Scripted: More advanced and flexible (written in Groovy)
+* Multibranch: Automatically runs pipelines for each branch in Git
+* Blue Ocean: Modern UI to view and manage pipelines
+
+**Which ones you can use:**
+
+* Use Declarative for most cases
+* Use Scripted if you need more control
+* Use Multibranch for real Git projects with multiple branches
+
+
+
