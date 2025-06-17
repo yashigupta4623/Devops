@@ -1,6 +1,6 @@
 What is Jenkins?
 
-Jenkins is an open-source automation server** used to build, test, and deploy software automatically. It helps implement Continuous Integration (CI) and Continuous Deployment (CD)** pipelines.
+Jenkins is an open-source automation server used to build, test, and deploy software automatically. It helps implement Continuous Integration (CI) and Continuous Deployment (CD)** pipelines.
 
 - Why Use Jenkins in DevOps?
 
@@ -93,11 +93,20 @@ pipeline {
 * Multibranch: Automatically runs pipelines for each branch in Git
 * Blue Ocean: Modern UI to view and manage pipelines
 
-**Which ones you can use:**
+Which ones you can use:
 
 * Use Declarative for most cases
 * Use Scripted if you need more control
 * Use Multibranch for real Git projects with multiple branches
 
 
+[DOCKER]
+
+Docker is a tool that helps you package your app and everything it needs(like code, libararies, and settings) into a small unit called a Container. This container nan run on any computer that has Docker, so your app works the same everywhere.
+Think of it like putting ur app in a box with all its tools - once packed, you can take it anywhere and its still work perfectly.
+
+Why it is useful?
+- Your app runs the same on any computer.
+- Easy to share and deploy apps.
+- Saves times by avoiding "it works on my machine" problems.
 
