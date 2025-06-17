@@ -1,0 +1,38 @@
+[http, https, firewall, port]
+
+
+| Concept        | Description                                                                            |
+| -------------- | -------------------------------------------------------------------------------------- |
+| IP Address     | Unique identifier of a device on a network (e.g., `192.168.1.1`)                       |
+|   DNS          | Converts domain names to IP addresses (e.g., `google.com` → `142.250.183.206`)         |
+|   HTTP         | Hypertext Transfer Protocol — sends/receives data over web (port 80)                   |
+|   HTTPS        | Secure HTTP using SSL/TLS encryption (port 443)                                        |
+|   Ports        | Virtual endpoints to communicate with services (e.g., port 22 for SSH, 3306 for MySQL) |
+|   Firewall     | Controls network traffic based on predefined security rules                            |
+|    NAT         | Network Address Translation — helps map private IPs to public IPs                      |
+|   Subnet       | A logical division of IP networks                                                      |
+
+FIREWALL is like a security guard for your computer or network. It controls what data can come in or go out by allowing or blocking network traffic based on rules.
+
+Firewall rules can be based on :
+- IP Address
+- Domain Names
+- Protocols
+- Programs
+- Ports
+- keywords
+
+Types :
+1. NETWORK BASED FW : Combination of H/W n S/W; protects an entire network.
+2. HOST BASED FW : S/W fw installed on compt;protect the computer only; third party host based firewall; eg : Zone Alarm
+
+- FIREWALL CONTROL(using ufw)
+
+sudo ufw status              # View current status
+sudo ufw allow 22            # Allow SSH
+sudo ufw allow 80            # Allow HTTP
+sudo ufw deny 23             # Block Telnet
+sudo ufw enable              # Turn firewall ON
+
+
+
