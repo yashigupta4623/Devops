@@ -1,0 +1,116 @@
+🐧 Linux Basic Commands (Cheat Sheet)
+
+1. File & Directory Commands
+
+| Task                        | Command                            |
+| --------------------------- | ---------------------------------- |
+| List files                  | `ls`                               |
+| List all (including hidden) | `ls -a`                            |
+| Long listing with details   | `ls -l`                            |
+| Change directory            | `cd /path/to/dir`                  |
+| Go back one directory       | `cd ..`                            |
+| Create a directory          | `mkdir folder_name`                |
+| Create empty file           | `touch file.txt`                   |
+| Copy file                   | `cp source.txt dest.txt`           |
+| Move/rename file            | `mv old.txt new.txt`               |
+| Delete file                 | `rm file.txt`                      |
+| Delete folder recursively   | `rm -r folder_name`                |
+| View file content           | `cat file.txt`                     |
+| View file page by page      | `less file.txt` or `more file.txt` |
+| Search inside file          | `grep "text" file.txt`             |
+
+---
+
+2. File Permissions & Ownership
+
+| Task               | Command                                |
+| ------------------ | -------------------------------------- |
+| View permissions   | `ls -l`                                |
+| Change permissions | `chmod +x file.sh` *(make executable)* |
+| Change owner       | `chown user file.txt`                  |
+| Change group       | `chgrp group file.txt`                 |
+
+---
+
+3. User & Group Management
+
+| Task               | Command                |
+| ------------------ | ---------------------- |
+| Add user           | `sudo adduser newuser` |
+| Switch user        | `su - username`        |
+| Check current user | `whoami`               |
+| Show user info     | `id`                   |
+| List users         | `cat /etc/passwd`      |
+
+---
+
+4. Process & System Monitoring
+
+| Task                        | Command         |
+| --------------------------- | --------------- |
+| Running processes           | `ps aux`        |
+| Interactive process monitor | `top` or `htop` |
+| Kill process                | `kill PID`      |
+| System uptime               | `uptime`        |
+| Disk usage                  | `df -h`         |
+| Memory usage                | `free -h`       |
+
+---
+
+5. Package Management (Debian/Ubuntu)
+
+| Task                | Command                        |
+| ------------------- | ------------------------------ |
+| Update package list | `sudo apt update`              |
+| Upgrade packages    | `sudo apt upgrade`             |
+| Install package     | `sudo apt install packagename` |
+| Remove package      | `sudo apt remove packagename`  |
+
+---
+
+6. Networking
+
+| Task             | Command                       |
+| ---------------- | ----------------------------- |
+| Show IP address  | `ip a` or `ifconfig`          |
+| Ping a server    | `ping google.com`             |
+| DNS lookup       | `nslookup domain.com`         |
+| Download file    | `wget URL`                    |
+| Check open ports | `netstat -tuln` or `ss -tuln` |
+
+---
+
+7. SSH (Secure Shell)
+
+| Task                     | Command                         |
+| ------------------------ | ------------------------------- |
+| Connect to remote server | `ssh username@ip_address`       |
+| Use custom port          | `ssh -p 2222 user@ip`           |
+| Copy file to server      | `scp file.txt user@ip:/path`    |
+| Copy file from server    | `scp user@ip:/path/file.txt ./` |
+| Generate SSH key pair    | `ssh-keygen`                    |
+| Add SSH key to agent     | `ssh-add ~/.ssh/id_rsa`         |
+
+---
+
+8. Bash Shortcuts 
+
+| Task                 | Command    |
+| -------------------- | ---------- |
+| Repeat last command  | `!!`       |
+| History of commands  | `history`  |
+| Auto-complete        | `<Tab>`    |
+| Stop current command | `Ctrl + C` |
+| Clear screen         | `clear`    |
+
+---
+
+9. Logs & Services
+
+| Task              | Command                       |
+| ----------------- | ----------------------------- |
+| View system log   | `cat /var/log/syslog`         |
+| Start service     | `sudo systemctl start nginx`  |
+| Stop service      | `sudo systemctl stop nginx`   |
+| Enable on boot    | `sudo systemctl enable nginx` |
+| Status of service | `systemctl status nginx`      |
