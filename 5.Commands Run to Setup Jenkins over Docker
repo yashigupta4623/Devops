@@ -1,0 +1,35 @@
+Install Docker (macOS)
+
+1. xcode-select --install
+   Installs required developer tools (like git, compliers, make) for Homebrew.
+
+2. /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   Installs Homebrew, the macOS package manager, this pkg manager simoifies the installation of docker, git, node.js etc
+
+3. echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+   Ensures brew works properly in your terminal.
+
+4. brew install --cask docker
+   Installs Docker Desktop (GUI + CLI).
+
+5. docker --version
+   Confirms Docker is installed and running.
+
+---
+
+ ✅ Set Up Jenkins using Docker
+
+6. docker pull jenkins/jenkins:lts
+   Downloads Jenkins LTS image from Docker Hub— pulling it ensures you can later run it in a container.
+
+7. docker run -d --name jenkins -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+   Runs Jenkins container with web UI on port 8080 and saves data.
+
+8. docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+   Gets the initial admin password to unlock Jenkins.
+
+9. docker ps
+   Verifies Jenkins container is running.
+
+10. Open in browser
+    Go to http://localhost:8080 to set up Jenkins.
