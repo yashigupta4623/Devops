@@ -1,0 +1,119 @@
+Linux Basic Commands (Cheat Sheet with Flags)
+
+ 1. 📁 File & Directory Commands
+
+| Task                      | Command / Flag Example  | Flag Purpose                        |
+| ------------------------- | ----------------------- | ----------------------------------- |
+| List files                | `ls`                    |                                     |
+| List all files            | `ls -a`                 | `-a` shows hidden files             |
+| Long listing              | `ls -l`                 | `-l` shows permissions, owner, etc. |
+| Change directory          | `cd /path/to/dir`       |                                     |
+| Go back one level         | `cd ..`                 |                                     |
+| Create a directory        | `mkdir folder_name`     |                                     |
+| Create empty file         | `touch file.txt`        |                                     |
+| Copy file                 | `cp a.txt b.txt`        |                                     |
+| Copy folder recursively   | `cp -r dir1 dir2`       | `-r` for recursive copy             |
+| Move/rename file          | `mv old.txt new.txt`    |                                     |
+| Delete file               | `rm file.txt`           |                                     |
+| Delete folder recursively | `rm -r folder/`         | `-r` for folder delete              |
+| Force delete              | `rm -rf folder/`        | `-f` force, `-r` recursive          |
+| View file content         | `cat file.txt`          |                                     |
+| View paginated            | `less file.txt`         |                                     |
+| Append to file            | `echo "hi" >> file.txt` | `>>` appends text                   |
+
+---
+
+ 2. 🔐 File Permissions & Ownership
+
+| Task             | Command Example             | Flag Purpose                  |
+| ---------------- | --------------------------- | ----------------------------- |
+| View permissions | `ls -l`                     | `-l` for long listing         |
+| Make executable  | `chmod +x script.sh`        | `+x` gives execute permission |
+| Change owner     | `sudo chown user file.txt`  |                               |
+| Change group     | `sudo chgrp group file.txt` |                               |
+
+---
+
+ 3. 👥 User & Group Management
+
+| Task           | Command Example        | Flag Purpose            |
+| -------------- | ---------------------- | ----------------------- |
+| Add user       | `sudo adduser newuser` |                         |
+| Switch user    | `su - username`        | `-` loads full user env |
+| Current user   | `whoami`               |                         |
+| Show user info | `id`                   | Shows UID, GID, groups  |
+| List users     | `cat /etc/passwd`      |                         |
+
+---
+
+ 4. 🧠 Process & System Monitoring
+
+| Task              | Command        | Flag Purpose                           |
+| ----------------- | -------------- | -------------------------------------- |
+| Running processes | `ps aux`       | `a` all users, `u` details, `x` no TTY |
+| Monitor live      | `top` / `htop` | `htop` is more visual                  |
+| Kill a process    | `kill PID`     | Use `ps` to get PID                    |
+| System uptime     | `uptime`       |                                        |
+| Disk usage        | `df -h`        | `-h` human-readable                    |
+| Memory usage      | `free -h`      | `-h` human-readable                    |
+
+---
+
+ 5. 📦 Package Management (Debian/Ubuntu)
+
+| Task             | Command                  |
+| ---------------- | ------------------------ |
+| Update packages  | `sudo apt update`        |
+| Upgrade packages | `sudo apt upgrade`       |
+| Install package  | `sudo apt install nginx` |
+| Remove package   | `sudo apt remove nginx`  |
+
+---
+
+ 6. 🌐 Networking
+
+| Task             | Command                       | Flag Purpose                                 |
+| ---------------- | ----------------------------- | -------------------------------------------- |
+| Show IP          | `ip a` or `ifconfig`          | `a` = all interfaces                         |
+| Ping server      | `ping google.com`             | Ctrl+C to stop                               |
+| DNS lookup       | `nslookup domain.com`         |                                              |
+| Download file    | `wget URL`                    |                                              |
+| Check open ports | `netstat -tuln` or `ss -tuln` | `t` TCP, `u` UDP, `l` listening, `n` numeric |
+
+---
+
+ 7. 🔐 SSH (Secure Shell)
+
+| Task                     | Command                         |
+| ------------------------ | ------------------------------- |
+| Connect to remote server | `ssh user@ip`                   |
+| Use custom port          | `ssh -p 2222 user@ip`           |
+| Copy file to server      | `scp file.txt user@ip:/path`    |
+| Copy file from server    | `scp user@ip:/path/file.txt ./` |
+| Generate SSH key         | `ssh-keygen`                    |
+| Add key to agent         | `ssh-add ~/.ssh/id_rsa`         |
+
+---
+
+ 8. ⚡ Bash Shortcuts
+
+| Task                   | Shortcut   |
+| ---------------------- | ---------- |
+| Repeat last command    | `!!`       |
+| View command history   | `history`  |
+| Auto-complete          | `<Tab>`    |
+| Cancel running command | `Ctrl + C` |
+| Clear screen           | `clear`    |
+
+---
+
+ 9. 📋 Logs & Services
+
+| Task            | Command                       |
+| --------------- | ----------------------------- |
+| View system log | `cat /var/log/syslog`         |
+| Start service   | `sudo systemctl start nginx`  |
+| Stop service    | `sudo systemctl stop nginx`   |
+| Enable on boot  | `sudo systemctl enable nginx` |
+| Check service   | `systemctl status nginx`      |
+
